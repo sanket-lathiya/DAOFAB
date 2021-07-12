@@ -10,7 +10,59 @@ Steps to run assignment project.
 
 First Task Rest Api : GET : http://localhost:8080/daofab-api/v1/parent-transactions?page=0&size=3
 
+Sample response :
+[
+    {
+        "id": 1,
+        "sender": "ABC",
+        "receiver": "XYZ",
+        "totalAmount": 200,
+        "totalPaidAmount": 100
+    },
+    {
+        "id": 2,
+        "sender": "XYZ",
+        "receiver": "MNP",
+        "totalAmount": 100,
+        "totalPaidAmount": 100
+    },
+    {
+        "id": 3,
+        "sender": "XYZ",
+        "receiver": "MNP",
+        "totalAmount": 300,
+        "totalPaidAmount": 260
+    }
+]
+
+
+
 Second Task Rest Api : GET : http://localhost:8080/daofab-api/v1/child-transactions/{parentId}
+
+Sample response for parentId=1 :
+[
+    {
+        "id": 1,
+        "sender": "ABC",
+        "receiver": "XYZ",
+        "totalAmount": 200,
+        "paidAmount": 10
+    },
+    {
+        "id": 2,
+        "sender": "ABC",
+        "receiver": "XYZ",
+        "totalAmount": 200,
+        "paidAmount": 50
+    },
+    {
+        "id": 3,
+        "sender": "ABC",
+        "receiver": "XYZ",
+        "totalAmount": 200,
+        "paidAmount": 40
+    }
+]
 
 
 
